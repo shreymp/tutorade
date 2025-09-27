@@ -1,0 +1,281 @@
+html {
+  /* rem - 16 * rem amount - makes dynamic sizing webpages and distances */
+  font-size: 16px;
+  font-family: "Poppins", Calibri, sans-serif;
+}
+
+body {
+  background-color: #daf06d27;
+}
+
+.header {
+  background-color: #3f9caf;
+  /* makes the header stay when the page is scrolled down */
+  position: sticky;
+  top: 5px; /* adds space when the page is scrolled down and the header stays sticky */
+  color: white;
+  border-bottom: 2px solid #daf06d;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 55px;
+  padding: 0.15rem 0.6rem;
+}
+
+.header-container {
+  display: grid;
+  /* 2 fractional grids and one flexible middle for the heading */
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  margin: auto 0.6rem;
+}
+
+.header-title {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: white;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  /* adds space */
+  gap: 0.5rem;
+}
+
+.navbar {
+  /* pushes to end of flexbox */
+  justify-self: end;
+}
+
+.navbar ul {
+  display: flex;
+  /* adds space */
+  gap: 1rem;
+  list-style: none;
+}
+
+.navbar a {
+  color: white;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  transition: 0.2s;
+  text-decoration: none;
+}
+
+.navbar a:hover,
+a.current {
+  /* hover accent */
+  background-color: #daf06d;
+  color: #0f172a;
+}
+
+.hero {
+  display: grid;
+  /* 1fr - 1 fraction of the available space, there are 2, so 2 equal fractions of the space are the columns */
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  /* adds space between grid rows and columns */
+  gap: 2rem;
+  padding: 2rem 1rem;
+  background: #f9fafb;
+}
+
+.hero-content h1 {
+  font-size: 2rem;
+  color: #0f172a;
+}
+
+.hero-content p {
+  color: #475569;
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+}
+
+.hero-image img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.mission {
+  display: grid;
+  /* 1fr - 1 fraction of the available space, there are 2, so 2 equal fractions of the space are the columns */
+  grid-template-columns: 1fr 1fr;
+  /* adds space between grid rows and columns */
+  gap: 2rem;
+  margin: 2rem auto;
+  max-width: 1100px;
+  padding: 0 1rem;
+}
+
+.mission-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Element Positioning */
+.card1 {
+  /* 1|   2|   3| */
+  grid-column: 1 / 2;
+  grid-row: 1;
+}
+
+.card2 {
+  grid-column: 2 / 3;
+  grid-row: 2;
+}
+
+.mission-image {
+  grid-column: 1 / 2; /* under card1, left side */
+  grid-row: 2;
+}
+
+.mission-image img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.learn-more-btn {
+  grid-column: 2 / 3;
+  grid-row: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+  /* standard button styling used across webpages */
+  background: #2563eb;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  /* bolder font size */
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  background: #daf06d;
+  color: #0f172a;
+}
+
+.mission-card h2 {
+  margin-bottom: 0.5rem;
+  color: #2563eb;
+}
+
+.mission-card p {
+  color: #475569;
+}
+
+.opportunities {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin: 2rem auto;
+  max-width: 1100px;
+  padding: 0 1rem;
+}
+
+.opportunities-header {
+  grid-row: 1;
+  /* spans 2 css grid columns */
+  grid-column: span 2;
+  text-align: center;
+}
+
+.opportunities-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.opportunities-card h2 {
+  margin-bottom: 0.5rem;
+  color: #2563eb;
+}
+
+.opportunities-card li {
+  color: #475569;
+}
+
+hr {
+  background-color: #475569;
+  /* dynamic width */
+  width: 30%;
+  border-radius: 5px;
+  /* 0px horizontal offset, 2px vertical offset, 4px blur radius, 20% opacity for black */
+  box-shadow: 0 2px 4px rgb(0, 0, 0, 0.2);
+}
+
+footer {
+  text-align: center;
+  /* creates the footer 0px from the bottom and 0 from the left,
+                 and stretching 100% the width of the screen */
+  /* bottom: 0;
+  left: 0; */
+  width: 100%;
+}
+
+.tutors-page {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.tutors-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #1a237e;
+}
+
+.tutor-grid {
+  display: grid;
+  /* 3 = fractional columns */
+  grid-template-columns: 1fr 1fr 1fr;
+  /* adds space */
+  gap: 2rem;
+}
+
+.tutor-card {
+  background-color: #d3d3d3;
+  /* rounded */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.tutor-card img {
+  width: 120px;
+  height: 120px;
+  /* preserves aspect ratio, and fills the container */
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  box-shadow: 0 20px 15px rgba(0, 0, 0, 0.12);
+}
+
+.tutor-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #2563eb;
+}
+
+.tutor-subjects {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: #ff3838;
+}
+
+.tutor-info {
+  margin-bottom: 0.5rem;
+  color: #374353;
+  margin-bottom: 2.5rem;
+}
